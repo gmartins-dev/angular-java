@@ -8,16 +8,12 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/crud-angular",
         "index": "apps/crud-angular/src/index.html",
         "browser": "apps/crud-angular/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/crud-angular/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -27,7 +23,7 @@
           }
         ],
         "styles": [
-          "@angular/material/prebuilt-themes/cyan-orange.css",
+          "@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/crud-angular/src/styles.scss"
         ],
         "scripts": []
@@ -79,9 +75,7 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/crud-angular/jest.config.ts"
       }
