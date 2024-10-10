@@ -7,10 +7,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [MatToolbarModule, RouterLink, RouterOutlet],
   template: `
-    <mat-toolbar color="primary">
-      <h1 [routerLink]="['/']" style="cursor: pointer;">
-        CRUD | Angular + Java
-      </h1>
+    <mat-toolbar>
+      <h1 [routerLink]="['/']" style="cursor: pointer;">Courses App</h1>
     </mat-toolbar>
     <router-outlet></router-outlet>
   `,

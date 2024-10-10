@@ -36,10 +36,13 @@ $crud-angular-theme: mat.m2-define-dark-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
-html,
+html {
+  height: 100%;
+}
 body {
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
   background-color: #37474f;
   color: #eceff1;

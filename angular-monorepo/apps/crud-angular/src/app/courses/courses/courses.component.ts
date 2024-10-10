@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { Course } from './model/course';
 
 const MOCK_DATA: Course[] = [
@@ -11,7 +13,7 @@ const MOCK_DATA: Course[] = [
 @Component({
   selector: 'app-courses',
   standalone: true,
-  imports: [CommonModule, MatTableModule],
+  imports: [CommonModule, MatTableModule, MatCardModule, MatToolbarModule],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',
 })
