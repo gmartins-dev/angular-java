@@ -5,6 +5,6 @@ export const APP_ROUTES: Routes = [
   {
     path: 'courses',
     loadChildren: () =>
-      import('../app/courses/courses.routes').then((m) => m.COURSES_ROUTES),
+      import('./courses/courses.routes').then((m) => m.COURSES_ROUTES),
   },
 ];
