@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Observable } from 'rxjs';
 import { Course } from '../model/course';
 import { CoursesService } from '../services/courses.service';
 
@@ -14,15 +15,12 @@ import { CoursesService } from '../services/courses.service';
   styleUrl: './courses.component.scss',
 })
 export class CoursesComponent implements OnInit {
-  courses: Course[] = [];
+  courses: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
 
   constructor(private coursesService: CoursesService) {
-    this.coursesService = new CoursesService();
     this.courses = this.coursesService.list();
   }
 
-  ngOnInit(): void {
-    // this.coursesService.list();
-  }
+  ngOnInit(): void {}
 }
